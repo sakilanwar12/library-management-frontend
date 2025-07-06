@@ -1,9 +1,10 @@
 import { Outlet } from "react-router";
+import Navbar from "~/components/Navbar";
 
 export default function Layout() {
   return (
     <div>
-      <h1>My Site</h1>
+      <Navbar />
       <Outlet />
     </div>
   );
