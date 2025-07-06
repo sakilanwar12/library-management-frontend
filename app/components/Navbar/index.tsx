@@ -6,7 +6,7 @@ function Navbar() {
       <div className="container">
         <div className="flex">
           <div className="flex-1">
-            <Link to="/" className="text-sm font-medium">
+            <Link to="/" className="text-sm font-medium hover:text-blue-500">
               Library Management
             </Link>
           </div>

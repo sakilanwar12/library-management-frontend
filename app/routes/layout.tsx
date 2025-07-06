@@ -1,11 +1,15 @@
 import { Outlet } from "react-router";
+import Footer from "~/components/Footer";
 import Navbar from "~/components/Navbar";
 
 export default function Layout() {
   return (
     <div>
       <Navbar />
-      <Outlet />
+      <div className="container mx-auto py-5">
+        <Outlet />
+      </div>
+      <Footer />
     </div>
   );
 }
