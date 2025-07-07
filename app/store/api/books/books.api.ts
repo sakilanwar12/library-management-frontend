@@ -10,7 +10,11 @@ export const bookApi = apiSlice.injectEndpoints({
       }),
       invalidatesTags: ["Books"],
     }),
+    getBooks: builder.query({
+      query: () => "/api/books",
+      providesTags: ["Books"],
+    }),
   }),
 });
 
-export const { useCreateBookMutation } = bookApi;
+export const { useCreateBookMutation, useGetBooksQuery } = bookApi;
