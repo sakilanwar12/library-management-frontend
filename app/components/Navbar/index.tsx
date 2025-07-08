@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { AddNewBook } from "../features/modals/AddNewBook";
 
 function Navbar() {
   return (
@@ -15,10 +16,11 @@ function Navbar() {
               <Link to="/" className="text-sm font-medium hover:text-blue-500">
                 All Books
               </Link>
-              <Link to="/add-book" className="text-sm font-medium hover:text-blue-500">
-                Add Book
-              </Link>
-              <Link to="/borrow-summery" className="text-sm font-medium hover:text-blue-500">
+              <AddNewBook />
+              <Link
+                to="/borrow-summery"
+                className="text-sm font-medium hover:text-blue-500"
+              >
                 Borrow Summary
               </Link>
             </nav>

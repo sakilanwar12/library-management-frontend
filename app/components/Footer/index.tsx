@@ -2,7 +2,7 @@ import { Separator } from "../ui/separator";
 
 function Footer() {
   return (
-    <>
+    <div className="fixed bottom-0 left-0 w-full bg-card shadow">
       <div className="container mx-auto">
         <Separator />
       </div>
@@ -12,7 +12,7 @@ function Footer() {
           {new Date().getFullYear()} All rights reserved
         </p>
       </footer>
-    </>
+    </div>
   );
 }
 

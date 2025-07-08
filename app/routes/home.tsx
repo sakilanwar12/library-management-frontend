@@ -1,5 +1,5 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import BookTable from "~/components/features/tables/BookTable";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,5 +9,9 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <div>
+      <BookTable />
+    </div>
+  );
 }
