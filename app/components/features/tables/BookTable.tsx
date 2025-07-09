@@ -15,6 +15,7 @@ import {
 } from "~/components/ui/table";
 
 import { useGetBooksQuery } from "~/store/api/books/books.api";
+import { EditBook } from "../modals/EditBook";
 
 function BookTable() {
   const { data: getAllBooksRes, ...getAllBooksApiState } = useGetBooksQuery();
@@ -60,9 +61,7 @@ function BookTable() {
                 </TableCell>
                 <TableCell className="flex gap-2">
                   <Button variant={"secondary"}>Borrow</Button>
-                  <Button variant={"secondary"}>
-                    <SquarePenIcon className="w-4 h-4" />
-                  </Button>
+                  <EditBook />
                   <Button variant={"secondary"}>
                     <Trash2 className="w-4 h-4" />
                   </Button>
