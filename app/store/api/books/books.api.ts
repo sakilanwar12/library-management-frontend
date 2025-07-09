@@ -15,7 +15,7 @@ export const bookApi = apiSlice.injectEndpoints({
         body: data,
       }),
 
-      invalidatesTags: ["getAllAddOn", "getAllEvent", "getAnEvent"],
+      invalidatesTags: ["Books"],
     }),
     getBooks: builder.query<TGetBooksRes, TGetBooksArgs>({
       query: () => "/api/books",

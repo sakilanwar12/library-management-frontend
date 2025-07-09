@@ -10,13 +10,13 @@ import {
   DialogTrigger,
 } from "~/components/ui/dialog";
 import AddNewBookForm from "../forms/AddNewBookForm";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 export function AddNewBook() {
   const buttonRef = useRef<HTMLInputElement>(null);
-
+  const [open, setOpen] = useState(false);
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button
           variant="outline"
@@ -30,7 +30,7 @@ export function AddNewBook() {
           <DialogTitle> Add New Book</DialogTitle>
           <DialogDescription>Add a new book to your library</DialogDescription>
         </DialogHeader>
-        <AddNewBookForm ref={buttonRef} />
+        <AddNewBookForm ref={buttonRef} setOpen={setOpen} />
         <DialogFooter>
           <DialogClose asChild>
             <Button variant="outline">Cancel</Button>

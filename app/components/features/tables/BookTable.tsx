@@ -1,5 +1,7 @@
+import { SquarePenIcon, Trash2 } from "lucide-react";
 import Loader from "~/components/Loader";
 import { Badge } from "~/components/ui/badge";
+import { Button } from "~/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 import {
   Table,
@@ -56,7 +58,15 @@ function BookTable() {
                     <Badge variant="destructive">Not Available</Badge>
                   )}
                 </TableCell>
-                <TableCell>Action</TableCell>
+                <TableCell className="flex gap-2">
+                  <Button variant={"secondary"}>Borrow</Button>
+                  <Button variant={"secondary"}>
+                    <SquarePenIcon className="w-4 h-4" />
+                  </Button>
+                  <Button variant={"secondary"}>
+                    <Trash2 className="w-4 h-4" />
+                  </Button>
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
