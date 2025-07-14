@@ -18,6 +18,7 @@ import { useGetBooksQuery } from "~/store/api/books/books.api";
 import { EditBook } from "../modals/EditBook";
 import DeleteBook from "../modals/DeleteBook";
 import { Link } from "react-router";
+import { BorrowBook } from "../modals/BorrowBook";
 
 function BookTable() {
   const { data: getAllBooksRes, ...getAllBooksApiState } = useGetBooksQuery();
@@ -62,7 +63,7 @@ function BookTable() {
                   )}
                 </TableCell>
                 <TableCell className="flex gap-2">
-                  <Button variant={"secondary"}>Borrow</Button>
+                  <BorrowBook id={item?._id} />
                   <EditBook id={item?._id} isEdit={true} />
                   <DeleteBook id={item?._id} />
                   <Button asChild variant={"secondary"}>

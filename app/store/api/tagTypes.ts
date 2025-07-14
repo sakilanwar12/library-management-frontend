@@ -1,1 +1,1 @@
-export const tagTypes = ["Books"];
+export const tagTypes = ["Books", "BorrowBooks"];
