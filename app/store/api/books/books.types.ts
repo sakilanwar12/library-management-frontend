@@ -34,3 +34,25 @@ export type TCreateBookRes = TApiResponse<TBook[]>;
 export type TGetBooksArgs = void;
 export type TGetBooksRes = TApiResponse<TBook[]>;
 // Get Books End
+
+// get a single book
+export type TGetBookByIdArgs = {
+  id: string | undefined;
+};
+
+export type TGetBookByIdRes = TApiResponse<TBook>;
+
+// update a book by id
+export type TUpdateBookByIdArgs = {
+  id: string | undefined;
+  body: TCreateBookArgs;
+};
+
+export type TUpdateBookByIdRes = TApiResponse<TBook>;
+
+// delete a book
+export type TDeleteBookByIdArgs = {
+  id: string | undefined;
+};
+
+export type TDeleteBookByIdRes = TApiResponse<null>;

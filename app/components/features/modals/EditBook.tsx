@@ -13,9 +13,14 @@ import AddNewBookForm from "../forms/AddNewBookForm";
 import { useRef, useState } from "react";
 import { SquarePenIcon } from "lucide-react";
 
-export function EditBook() {
+export interface IEditBookProps {
+  id?: string;
+  isEdit?: boolean;
+}
+export function EditBook({ id, isEdit }: IEditBookProps) {
   const buttonRef = useRef<HTMLInputElement>(null);
   const [open, setOpen] = useState(false);
+
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
@@ -28,7 +33,12 @@ export function EditBook() {
           <DialogTitle> Edit Book</DialogTitle>
           <DialogDescription>Edit a book</DialogDescription>
         </DialogHeader>
-        <AddNewBookForm ref={buttonRef} setOpen={setOpen} />
+        <AddNewBookForm
+          ref={buttonRef}
+          setOpen={setOpen}
+          id={id}
+          isEdit={isEdit}
+        />
         <DialogFooter>
           <DialogClose asChild>
             <Button variant="outline">Cancel</Button>
