@@ -1,4 +1,4 @@
-import { SquarePenIcon, Trash2 } from "lucide-react";
+import { Eye, SquarePenIcon, Trash2 } from "lucide-react";
 import Loader from "~/components/Loader";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
@@ -17,6 +17,7 @@ import {
 import { useGetBooksQuery } from "~/store/api/books/books.api";
 import { EditBook } from "../modals/EditBook";
 import DeleteBook from "../modals/DeleteBook";
+import { Link } from "react-router";
 
 function BookTable() {
   const { data: getAllBooksRes, ...getAllBooksApiState } = useGetBooksQuery();
@@ -64,6 +65,11 @@ function BookTable() {
                   <Button variant={"secondary"}>Borrow</Button>
                   <EditBook id={item?._id} isEdit={true} />
                   <DeleteBook id={item?._id} />
+                  <Button asChild variant={"secondary"}>
+                    <Link to={`/books/${item?._id}`}>
+                      <Eye className="w-4 h-4" />
+                    </Link>
+                  </Button>
                 </TableCell>
               </TableRow>
             ))}
