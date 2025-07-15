@@ -19,6 +19,7 @@ export type TCreateBorrowBookRes = TApiResponse<TBorrowBook[]>;
 
 export type TGetBorrowBooksArgs = void;
 export type TGetBorrowBook = {
+  _id: string;
   totalQuantity: number;
   book: {
     title: string;
