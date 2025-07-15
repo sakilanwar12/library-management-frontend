@@ -26,6 +26,7 @@ export type TBook = TCreateBookArgs & {
   updatedAt?: string;
 };
 
+
 export type TCreateBookRes = TApiResponse<TBook[]>;
 
 // Create Book End
