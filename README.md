@@ -1,87 +1,54 @@
-# Welcome to React Router!
+# 📚 Library Management Frontend
 
-A modern, production-ready template for building full-stack React applications using React Router.
+🔗 [Live Demo](https://library-management-frontend-bay.vercel.app/)  
+**Library Management App**
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+Welcome to the Library Management System! This is a modern, responsive frontend application built with React, React Router, and Redux Toolkit, styled using Tailwind CSS and designed for seamless interaction with a Node.js/Express-based backend API.
 
-## Features
+## 📖 Table of Contents
+- [Features](#-features)
+- [Demo](#-demo)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Configuration](#-configuration)
+- [Contributing](#-contributing)
+- [License](#-license)
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## 🚀 Features
+- Modern React setup using React Router v7
+- Centralized state management with Redux Toolkit
+- Seamless integration with RESTful backend APIs
+- Modular and reusable component design
+- Tailwind CSS for utility-first styling
+- TypeScript for static type safety
+- Dark mode support via next-themes
+- Radix UI components for accessibility and UX
+- Responsive layout for all device sizes
 
-## Getting Started
+## 🔍 Demo
+Check out the live version of the app [here](https://library-management-frontend-bay.vercel.app/)
 
-### Installation
+## ⚙️ Installation
+To get started with the project, follow these steps:
 
-Install the dependencies:
+1. Clone the repository:
+```bash
+git clone https://github.com/sakilanwar12/library-management-frontend
+```
+2. Navigate into the project directory:
 
 ```bash
-npm install
+cd library-management-frontend
 ```
-
-### Development
-
-Start the development server with HMR:
+3. Install dependencies:
 
 ```bash
-npm run dev
+pnpm install
 ```
 
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
+4. Run the development server:
 
 ```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+pnpm run dev
 ```
 
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
